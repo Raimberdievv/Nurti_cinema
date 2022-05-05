@@ -1,6 +1,7 @@
 from distutils.command.upload import upload
 from django.db import models
 
+
 # Create your models here.
 
 class Setting(models.Model):
@@ -42,5 +43,25 @@ class Ad(models.Model):
 
 
 
-# class Our_statistics(models.Model):
-    # title = models.CharField(max_length=255)
+class Login(models.Model):
+    name = models.CharField(max_length=25)
+    surname = models.CharField(max_length=50)
+    age = models.IntegerField()
+
+
+
+class Sign_up(models.Model):
+    name = models.CharField(max_length=25)
+    surname = models.CharField(max_length=50)
+    age = models.IntegerField()
+    tel = models.CharField(max_length=255)
+    profile_image = models.ImageField(upload_to = "media")
+    email = models.EmailField()
+
+  
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Пользователь"
+        verbose_name_plural = "Пользователи"
