@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     #cinema
     'apps.film',
+    'apps.categories',
+    'apps.settings',
+    # 'apps.cinema',
     
 ]
 

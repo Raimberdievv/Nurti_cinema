@@ -1,13 +1,22 @@
 from django.shortcuts import render
-from apps.film.models import Setting , Movies
+from apps.film.models import  Movies
+from django.shortcuts import render, get_object_or_404
+from apps.film.models import Movies
 # Create your views here.
 
 
 def index(request):
-    home = Setting.objects.latest('id')
     movies = Movies.objects.all()
     context = {
-        'home' : home,
         'movies' : movies,
     }
     return render(request,'index.html',context)
+
+
+
+def movie_detail(request, id):
+    movie = Movies.objects.get(id = id)
+    context = {
+        'movie' : movie,
+    }
+    return render (request,'movies.html',context)
