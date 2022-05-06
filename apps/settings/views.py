@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from apps.settings.models import  Setting
+# from apps.settings.models import  Setting,Login,Sign_up
 from apps.film.models import  Movies 
-from django.shortcuts import render, redirect
-from apps.settings.models import Setting ,Login, Sign_up
-
+from django.shortcuts import render
+from apps.settings.models import  Setting
 
 
 
@@ -56,10 +55,22 @@ def sign_up(request):
     context = {
         'home' : home,
     }
-    return render(request, 'sign-up.html',context)
+    return render(request, 'sign_up.html',context) 
     
 
 
-
+def watch_movie(request):
+    home = Setting.objects.latest('id')
+    context = {
+        'home' : home,
+    }
+    return render(request, 'watch_movie.html',context) 
 
   
+
+def contact(request):
+    home = Setting.objects.latest('id')
+    context = {
+        'home' : home,
+    }
+    return render(request, 'contacts.html',context)

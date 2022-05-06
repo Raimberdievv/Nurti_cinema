@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'apps.film',
     'apps.categories',
     'apps.settings',
-    # 'apps.cinema',
-    
+    # 'apps.users',   
 ]
 
 MIDDLEWARE = [

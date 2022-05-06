@@ -59,9 +59,13 @@ class Sign_up(models.Model):
     email = models.EmailField()
 
   
-    def __str__(self):
-        return self.name
+ 
+class Watch_movie(models.Model):
+    title = models.CharField(max_length=255)
 
-    class Meta:
-        verbose_name = "Пользователь"
-        verbose_name_plural = "Пользователи"
+
+
+class Contact(models.Model):
+    title = models.CharField(max_length=255)
+
+    

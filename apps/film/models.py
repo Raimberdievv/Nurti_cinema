@@ -19,4 +19,8 @@ class Movies(models.Model):
         verbose_name_plural = "Фильмы"    
 
 
-# class favorites(models.Model):
+
+class popular_movies(models.Model):
+    title = models.CharField(max_length=255)
+    
+

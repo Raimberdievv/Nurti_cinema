@@ -117,7 +117,7 @@
                                                 </li>
                                                 <!-- Sub Nav Item 4 End -->
                                                 <li>
-                                                    <a class="dropdown-item" href="sign-up.html">Зарегистрироваться</a>
+                                                    <a class="dropdown-item" href="{% url 'sign_up' %}">Зарегистрироваться</a>
                                                 </li>
                                                 <!-- Sub Nav Item 5 End -->
                                             </ul>
@@ -139,7 +139,7 @@
                             <li class="nav-item">
                                 <div class="nav-search">
                                     <a class="nav-link modal-popup" href="#search-popup"><i class="icofont-ui-search"></i></a>
-                                </div>
+                                </div>  
                                 <!-- Search Icon End -->
                             </li>
                             <li class="nav-item dropdown">
@@ -206,7 +206,7 @@
                                         <div aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdown-account" role="button"><img alt="" class="img-fluid user-icon rounded-circle" src="{% static 'assets/images/avatar/user.jpg' %}"></div>
                                         <ul class="dropdown-menu dropdown-menu-right fade-up">
                                             <li>
-                                                <a class="dropdown-item" href="account-settings.html">Account Settings</a>
+                                                <a class="dropdown-item" href="{% url 'account_settings' %}">Account Settings</a>
                                             </li>
                                             <!-- Li 1 end -->
                                             <li>
@@ -250,7 +250,7 @@
                                     </div>
                                     <p data-animation-in="fadeInUp" data-delay-in="1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                                     <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+                                        <a class="btn hvr-sweep-to-right" href="{% url 'watch_movie' %}" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                                     </div>
                                 </div>
                                 <!-- Col End -->
@@ -274,7 +274,7 @@
                                     </div>
                                     <p data-animation-in="fadeInUp" data-delay-in="1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                                     <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+                                        <a class="btn hvr-sweep-to-right" href="{% url 'watch_movie' %}" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                                     </div>
                                 </div>
                                 <!-- Col End -->
@@ -298,7 +298,7 @@
                                     </div>
                                     <p data-animation-in="fadeInUp" data-delay-in="1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                                     <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+                                        <a class="btn hvr-sweep-to-right" href="{% url 'watch_movie' %}" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                                     </div>
                                 </div>
                                 <!-- Col End -->
@@ -340,13 +340,13 @@
                                                     <div class="box-content">
                                                         <ul class="icon">
                                                             <li>
-                                                                <a href="watch-movie.html"><i class="fas fa-play"></i></a>
+                                                                <a href="{% url 'watch_movie' %}"><i class="fas fa-play"></i></a>
                                                             </li>
                                                             <li>
                                                                 <a href="#"><i class="fas fa-plus"></i></a>
                                                             </li>
                                                             <li>
-                                                                <a href="{% url 'movie_single'%}"><i class="fas fa-info"></i></a>
+                                                                <a href="{% url 'movie_single' %}"><i class="fas fa-info"></i></a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -354,7 +354,7 @@
                                                 </div>
                                                 <!-- Video Thumb End -->
                                                 <div class="video-content">
-                                                    <h2 class="video-title"><a href="{% url 'movie_single'%}">{{ movie.title }}</a></h2>
+                                                    <h2 class="video-title"><a href="{% url 'movie_single' %}">{{ movie.title }}</a></h2>
                                                     <div class="video-info d-flex align-items-center">
                                                         <span class="video-year">{{ movie.release_date }}</span> <span class="video-age">{{ movie.age_limit }}</span> <span class="video-type">{{ movie.film_genre}}</span>
                                                     </div>
@@ -377,13 +377,13 @@
                                                     <div class="box-content">
                                                         <ul class="icon">
                                                             <li>
-                                                                <a href="watch-movie.html"><i class="fas fa-play"></i></a>
+                                                                <a href="{% url 'watch_movie' %}"><i class="fas fa-play"></i></a>
                                                             </li>
                                                             <li>
                                                                 <a href="#"><i class="fas fa-plus"></i></a>
                                                             </li>
                                                             <li>
-                                                                <a href="movie-single.html"><i class="fas fa-info"></i></a>
+                                                                <a href="{% url 'movie_single' %}"><i class="fas fa-info"></i></a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -391,36 +391,12 @@
                                                 </div>
                                                 <!-- Video Thumb End -->
                                                 <div class="video-content">
-                                                    <h2 class="video-title"><a href="{% url 'movie_single'%}">{{ movie.title }}</a></h2>
+                                                    <h2 class="video-title"><a href="{% url 'movie_single' %}">{{ movie.title }}</a></h2>
                                                     <div class="video-info d-flex align-items-center">
                                                         <span class="video-year">{{ movie.release_date }}</span> <span class="video-age">{{ movie.age_limit }}</span> <span class="video-type">{{ movie.film_genre }}</span>
                                                     </div>
                                                 </div>
                                                 <!-- video Content End -->
-                                            </div>
-                                            <!-- video Block End -->
-                                        </div>
-                                        <!-- Col End -->
-                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-                                            <div class="video-block">
-                                                <div class="video-thumb position-relative thumb-overlay">
-                                                    <a href="#"><img alt="" class="img-fluid" src="{% static 'assets/images/latest-movies/02.jpg' %}"></a>
-                                                    <div class="box-content">
-                                                        <ul class="icon">
-                                                            <li>
-                                                                <a href="watch-movie.html"><i class="fas fa-play"></i></a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#"><i class="fas fa-plus"></i></a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="{% url 'movie_single'%}"><i class="fas fa-info"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- Box Content End -->
-                                                </div>
-                                                <!-- Video Thumb End --> 
                                             </div>
                                             <!-- video Block End -->
                                         </div>
@@ -438,119 +414,6 @@
                 </div>
                 <!-- Container End -->
             </section>
-            <!-- Main Tabs Section End -->
-            <!-- Start Pupular Section -->
-            <section class="pupular">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2 class="block-title">Популярные Фильмы</h2>
-                            <!-- Start Pupular Slider -->
-                            <div class="owl-carousel owl-theme" id="pupular-slider">
-                                <div class="item">
-                                    <div class="video-block">
-                                        <div class="video-thumb position-relative thumb-overlay">
-                                            <a href="#"><img alt="" class="img-fluid" src="{{ media.picture.url }}"></a>
-                                            <div class="box-content">
-                                                <ul class="icon">
-                                                    <li>
-                                                        <a href="watch-movie.html"><i class="fas fa-play"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fas fa-plus"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="movie-single.html"><i class="fas fa-info"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Box Content End -->
-                                        </div>
-                                        <!-- Video Thumb End -->
-                                        <div class="video-content">
-                                            <h2 class="video-title"><a href="movie-single.html">{{ movies.title }}</a></h2>
-                                            <div class="video-info d-flex align-items-center">
-                                                <span class="video-year">{{ release_date }}</span> <span class="video-age">{{ age_limit }}</span> <span class="video-type">{{ film_genre }}</span>
-                                            </div>
-                                        </div>
-                                        <!-- video Content End -->
-                                    </div>
-                                    <!-- video Block End -->
-                                </div>
-                                <!-- Item 1 End -->
-                                <div class="item">
-                                    <div class="video-block">
-                                        <div class="video-thumb position-relative thumb-overlay">
-                                            <a href="#"><img alt="" class="img-fluid" src="{{ media.picture.url }}"></a>
-                                            <div class="box-content">
-                                                <ul class="icon">
-                                                    <li>
-                                                        <a href="watch-movie.html"><i class="fas fa-play"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fas fa-plus"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="movie-single.html"><i class="fas fa-info"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Box Content End -->
-                                        </div>
-                                        <!-- Video Thumb End -->
-                                        <div class="video-content">
-                                            <h2 class="video-title"><a href="movie-single.html">the fear</a></h2>
-                                            <div class="video-info d-flex align-items-center">
-                                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
-                                            </div>
-                                        </div>
-                                        <!-- video Content End -->
-                                    </div>
-                                    <!-- video Block End -->
-                                </div>
-                                <!-- Item 6 End -->
-                                <div class="item">
-                                    <div class="video-block">
-                                        <div class="video-thumb position-relative thumb-overlay">
-                                            <a href="#"><img alt="" class="img-fluid" src="{% static 'assets/images/popular/07.jpg' %}"></a>
-                                            <div class="box-content">
-                                                <ul class="icon">
-                                                    <li>
-                                                        <a href="watch-movie.html"><i class="fas fa-play"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fas fa-plus"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="movie-single.html"><i class="fas fa-info"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Box Content End -->
-                                        </div>
-                                        <!-- Video Thumb End -->
-                                        <div class="video-content">
-                                            <h2 class="video-title"><a href="movie-single.html">the love</a></h2>
-                                            <div class="video-info d-flex align-items-center">
-                                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
-                                            </div>
-                                        </div>
-                                        <!-- video Content End -->
-                                    </div>
-                                    <!-- video Block End -->
-                                </div>
-                                <!-- Item 7 End -->
-                            </div>
-                            <!-- Pupular Slider End -->
-                        </div>
-                        <!-- Col End -->
-                    </div>
-                    <!-- Row End -->
-                </div>
-                <!-- Container End -->
-            </section>
-            <!-- Pupular Section End -->
-            <!-- Start Office Box Section -->
             <section class="office-box">
                 <div class="container-fluid">
                     <div class="row">
@@ -573,7 +436,7 @@
                                         <div class="content">
                                             <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Romantic world</p><span class="caption mb-4" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
                                             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">
-                                                <a class="btn hvr-sweep-to-right" href="watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+                                                <a class="btn hvr-sweep-to-right" href="{% url 'watch_movie' %}" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a> <a class="btn hvr-sweep-to-right ml-3" href="#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                                             </div>
                                         </div>
                                     </div>

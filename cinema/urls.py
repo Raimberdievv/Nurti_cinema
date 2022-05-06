@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path,include
 from apps.film.views import index, movie_detail
 from apps.settings.views import about_us
+# from apps.users.views import UserRegistrationForm
 
 
 urlpatterns = [
@@ -26,5 +27,6 @@ urlpatterns = [
     path('', index, name="index"),
     path('',include('apps.settings.urls')),
     path('',include('apps.film.urls')),
+    path('',include('apps.users.urls'))
 ]
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

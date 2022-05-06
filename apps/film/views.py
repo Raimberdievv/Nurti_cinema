@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from apps.film.models import  Movies
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from apps.film.models import Movies
 # Create your views here.
 
@@ -20,3 +20,6 @@ def movie_detail(request, id):
         'movie' : movie,
     }
     return render (request,'movies.html',context)
+
+
+
