@@ -10,5 +10,5 @@ urlpatterns = [
     path('sign_up/',sign_up,name="sign_up"),
     path('watch_movie/',watch_movie,name="watch_movie"),
     path('contact/',contact,name="contact"),
-
+    path('movie_single/',movie_single,name="movie_single"),
 ]

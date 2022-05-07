@@ -204,7 +204,7 @@
         <!-- Start Video Player -->
         <div class="video-container">
             <video class="video d-block" controls="" loop="">
-                <source src="{% static 'assets/video/01-video.mp4" type="video/mp4">
+                <source src="{% static 'assets/video/01-video.mp4' %}" type="video/mp4">
             </video>
         </div>
         <!-- Video Player End -->
@@ -230,7 +230,7 @@
                                         <span> 1080p</span>
                                         <span>24p</span>
                                         <span><img class="img-fluid" src="{% static 'assets/images/dts-logo.png' %}" alt=""></span>
-                                        <span>7.1</span>
+                                        <span>{{ movies.rating }}</span>
                                     </div>
                                     <!-- Thumb Details End -->
                                 </div>
@@ -248,13 +248,13 @@
                                 <div class="details-info mb-4">
                                     <span><i class="icofont-user mr-2" aria-hidden="true"></i>Title</span>
                                     <span><i class="icofont-clock-time mr-2" aria-hidden="true"></i> 2hr 45min</span>
-                                    <span><i class="icofont-simple-smile mr-2" aria-hidden="true"></i>Release_date</span>
-                                    <span><i class="icofont-movie mr-2" aria-hidden="true"></i>Action</span>
+                                    <span><i class="icofont-simple-smile mr-2" aria-hidden="true"></i>{{ movies.release_date }}</span>
+                                    <span><i class="icofont-movie mr-2" aria-hidden="true"></i>{{ movies.film_genre }}</span>
                                     <span><i class="icofont-world mr-2" aria-hidden="true"></i> United States</span>
                                 </div>
                                 <!-- Details Info -->
                                 <div class="details-desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>{{ movies.description }}</p>
                                 </div>
                                 <!-- Details Desc -->
                                 <div class="movie-persons mb-4">
@@ -273,7 +273,7 @@
                                 <div class="details-buttons">
                                     <div class="row d-flex align-items-center">
                                         <div class="col-6 col-xl mb-xl-0 mb-3">
-                                            <a href="watch-movie.html" class="btn d-block hvr-sweep-to-right" tabindex="0"><i class="icofont-ui-play mr-2" aria-hidden="true"></i>Play</a>
+                                            <a href="{% url 'watch_movie' %}" class="btn d-block hvr-sweep-to-right" tabindex="0"><i class="icofont-ui-play mr-2" aria-hidden="true"></i>Play</a>
                                         </div>
                                         <!-- Col End -->
                                         <div class="col-6 col-xl mb-xl-0 mb-3">
@@ -297,7 +297,7 @@
                                                         <!-- Modal Body -->
                                                         <div class="modal-body">
                                                             <video class="video d-block" controls="" loop="">
-                                                                <source src="{{ movie_trailer }}" type="video/mp4">
+                                                                <source src="{{ movies.movie_trailer }}" type="video/mp4">
                                                             </video>
                                                         </div>
                                                         <!-- Modal Body -->
