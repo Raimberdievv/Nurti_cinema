@@ -17,14 +17,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
-from apps.film.views import index, movie_detail
-from apps.settings.views import about_us
 # from apps.users.views import UserRegistrationForm
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="index"),
     path('',include('apps.settings.urls')),
     path('',include('apps.film.urls')),
     path('',include('apps.users.urls'))

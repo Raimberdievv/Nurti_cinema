@@ -61,8 +61,10 @@ def sign_up(request):
 
 def watch_movie(request):
     home = Setting.objects.latest('id')
+    movies = Movies.objects.all().order_by('id')[:8]
     context = {
         'home' : home,
+        'movies' : movies,
     }
     return render(request, 'watch_movie.html',context) 
 

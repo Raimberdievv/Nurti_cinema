@@ -19,7 +19,7 @@ def movie_detail(request, id):
     context = {
         'movie' : movie,
     }
-    return render (request,'movies.html',context)
+    return render(request, 'watch_movie.html', context)
 
 
 

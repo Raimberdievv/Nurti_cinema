@@ -145,42 +145,10 @@
                                     <a class="nav-link menu-dropdown" data-toggle="dropdown" href="#"><i class="icofont-notification"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-right fade-up" role="menu">
                                         <li>
-                                            <a class="dropdown-item" href="#">
-                                                <div class="notification-card media">
-                                                    <div class="notification-thumb"><img alt="" class="img-fluid" src="{% static 'assets/images/notify/thumb-1.jpg' %}"></div>
-                                                    <!-- Notification thumb end -->
-                                                    <div class="notification-content media-body">
-                                                        <h2 class="notification-title">Iron Door</h2><span class="date"><i class="far fa-clock"></i> 1 min ago</span>
-                                                    </div>
-                                                    <!-- Notification Content end -->
-                                                </div>
-                                            </a>
-                                        </li>
                                         <!-- Li 1 end -->
                                         <li>
-                                            <a class="dropdown-item" href="#">
-                                                <div class="notification-card media">
-                                                    <div class="notification-thumb"><img alt="" class="img-fluid" src="{% static 'assets/images/notify/thumb-2.jpg' %}"></div>
-                                                    <!-- Notification thumb end -->
-                                                    <div class="notification-content media-body">
-                                                        <h2 class="notification-title">The Earth</h2><span class="date"><i class="far fa-clock"></i> 3 min ago</span>
-                                                    </div>
-                                                    <!-- Notification Content end -->
-                                                </div>
-                                            </a>
-                                        </li>
                                         <!-- Li 2 end -->
                                         <li>
-                                            <a class="dropdown-item" href="#">
-                                                <div class="notification-card media">
-                                                    <div class="notification-thumb"><img alt="" class="img-fluid" src="{% static 'assets/images/notify/thumb-3.jpg' %}"></div>
-                                                    <!-- Notification thumb end -->
-                                                    <div class="notification-content media-body">
-                                                        <h2 class="notification-title">City Dreams</h2><span class="date"><i class="far fa-clock"></i> 10 min ago</span>
-                                                    </div>
-                                                    <!-- Notification Content end -->
-                                                </div>
-                                            </a>
                                         </li>
                                         <!-- Li 3 end -->
                                     </ul>
@@ -204,7 +172,7 @@
                                         <div aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdown-account" role="button"><img alt="" class="img-fluid user-icon rounded-circle" src="images/avatar/user.jpg"></div>
                                         <ul class="dropdown-menu dropdown-menu-right fade-up">
                                             <li>
-                                                <a class="dropdown-item" href="account-settings.html">Account Settings</a>
+                                                <a class="dropdown-item" href="{% url 'account_settings' %}">Account Settings</a>
                                             </li>
                                             <!-- Li 1 end -->
                                             <li>
@@ -274,14 +242,14 @@
                         <div class="col-md-9">
                             <div class="play-details-content">
                                 <div class="title-block d-flex align-items-center justify-content-between">
-                                    <h2 class="play-title">The Dark Knight Rises</h2>
+                                    <h2 class="play-title">{{ movies.title }}</h2>
                                 </div>
                                 <!-- Title Block -->
                                 <div class="details-info mb-4">
-                                    <span><i class="icofont-user mr-2" aria-hidden="true"></i> 18+</span>
+                                    <span><i class="icofont-user mr-2" aria-hidden="true"></i>Title</span>
                                     <span><i class="icofont-clock-time mr-2" aria-hidden="true"></i> 2hr 45min</span>
-                                    <span><i class="icofont-simple-smile mr-2" aria-hidden="true"></i> 2021</span>
-                                    <span><i class="icofont-movie mr-2" aria-hidden="true"></i> Action</span>
+                                    <span><i class="icofont-simple-smile mr-2" aria-hidden="true"></i>Release_date</span>
+                                    <span><i class="icofont-movie mr-2" aria-hidden="true"></i>Action</span>
                                     <span><i class="icofont-world mr-2" aria-hidden="true"></i> United States</span>
                                 </div>
                                 <!-- Details Info -->
@@ -329,7 +297,7 @@
                                                         <!-- Modal Body -->
                                                         <div class="modal-body">
                                                             <video class="video d-block" controls="" loop="">
-                                                                <source src="video/01-video.mp4' %}" type="video/mp4">
+                                                                <source src="{{ movie_trailer }}" type="video/mp4">
                                                             </video>
                                                         </div>
                                                         <!-- Modal Body -->

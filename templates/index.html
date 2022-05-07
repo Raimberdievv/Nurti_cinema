@@ -105,7 +105,7 @@
                                                 </li>
                                                 <!-- Sub Nav Item 1 End -->
                                                 <li>
-                                                    <a class="dropdown-item" href="contacts.html">Связаться с нами</a>
+                                                    <a class="dropdown-item" href="{% url 'contact' %}">Связаться с нами</a>
                                                 </li>
                                                 <!-- Sub Nav Item 2 End -->
                                                 <li>
@@ -346,7 +346,7 @@
                                                                 <a href="#"><i class="fas fa-plus"></i></a>
                                                             </li>
                                                             <li>
-                                                                <a href="{% url 'movie_single' %}"><i class="fas fa-info"></i></a>
+                                                                <a href="{% url 'watch_movie' %}"><i class="fas fa-info"></i></a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -354,7 +354,7 @@
                                                 </div>
                                                 <!-- Video Thumb End -->
                                                 <div class="video-content">
-                                                    <h2 class="video-title"><a href="{% url 'movie_single' %}">{{ movie.title }}</a></h2>
+                                                    <h2 class="video-title"><a href="{% url 'watch_movie' %}">{{ movie.title }}</a></h2>
                                                     <div class="video-info d-flex align-items-center">
                                                         <span class="video-year">{{ movie.release_date }}</span> <span class="video-age">{{ movie.age_limit }}</span> <span class="video-type">{{ movie.film_genre}}</span>
                                                     </div>
@@ -383,7 +383,7 @@
                                                                 <a href="#"><i class="fas fa-plus"></i></a>
                                                             </li>
                                                             <li>
-                                                                <a href="{% url 'movie_single' %}"><i class="fas fa-info"></i></a>
+                                                                <a href="{% url 'watch_movie'  %}"><i class="fas fa-info"></i></a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -391,7 +391,7 @@
                                                 </div>
                                                 <!-- Video Thumb End -->
                                                 <div class="video-content">
-                                                    <h2 class="video-title"><a href="{% url 'movie_single' %}">{{ movie.title }}</a></h2>
+                                                    <h2 class="video-title"><a href="{% url 'watch_movie' %}">{{ movie.title }}</a></h2>
                                                     <div class="video-info d-flex align-items-center">
                                                         <span class="video-year">{{ movie.release_date }}</span> <span class="video-age">{{ movie.age_limit }}</span> <span class="video-type">{{ movie.film_genre }}</span>
                                                     </div>
